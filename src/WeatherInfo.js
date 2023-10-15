@@ -3,16 +3,15 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
-  console.log();
   return (
     <div className="WeatherInfo">
       <ul>
-        <li className="date mt-3">
+        <li className="date mt-2">
           <FormattedDate date={props.data.date} />
         </li>
       </ul>
       <h1>
-        <i className="fa-solid fa-location-dot mb-2"></i> {props.data.city}
+        <i className="fa-solid fa-location-dot mt-4 mb-2"></i> {props.data.city}
       </h1>
       <div className="row mt-4 temperature-now">
         <div className="col-6">
