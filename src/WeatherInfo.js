@@ -19,7 +19,11 @@ export default function WeatherInfo(props) {
       <div className="row mt-2 temperature-now">
         <div className="col-6">
           <img src={props.data.iconUrl} alt={props.data.description} />
-          <WeatherTemperature celsius={props.data.temperature} />
+          <WeatherTemperature
+            unit={props.unit}
+            setUnit={props.setUnit}
+            celsius={props.data.temperature}
+          />
         </div>
 
         <div className="col-6 list mt-2">
