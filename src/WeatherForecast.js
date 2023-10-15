@@ -7,14 +7,15 @@ export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
+  //to change coordinates after each load
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
-
-  useEffect(() => {
-    setLoaded(false);
-  }, [props.coordinates]);
 
   if (loaded) {
     return (
