@@ -6,17 +6,14 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <ul>
-        <li className="date">
+        <li className="date mt-3">
           <FormattedDate date={props.data.date} />
         </li>
       </ul>
       <h1>
-        <i className="fa-solid fa-location-dot"></i> {props.data.city}
+        <i className="fa-solid fa-location-dot mb-2"></i> {props.data.city}
       </h1>
-      <ul>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
-      <div className="row mt-2 temperature-now">
+      <div className="row mt-4 temperature-now">
         <div className="col-6">
           <img src={props.data.iconUrl} alt={props.data.description} />
           <WeatherTemperature
@@ -26,19 +23,17 @@ export default function WeatherInfo(props) {
           />
         </div>
 
-        <div className="col-6 list mt-2">
+        <div className="col-6 list mt-3">
           <ul>
-            <li>
-              <i class="fa-solid fa-temperature-full"></i> Feels Like:{" "}
-              <strong>{Math.round(props.data.feelsLike)}°C</strong>
+            <li className="text-capitalize">
+              <i class="fa-solid fa-hashtag"></i>
+              <strong> {props.data.description}</strong>
             </li>
             <li>
-              {" "}
               <i class="fa-solid fa-wind"></i> Wind Speed:{" "}
               <strong>{Math.round(props.data.wind * 2.24)} mph</strong>
             </li>
             <li>
-              {" "}
               <i class="fa-solid fa-droplet"></i> Humidity:{" "}
               <strong>{props.data.humidity}%</strong>
             </li>
