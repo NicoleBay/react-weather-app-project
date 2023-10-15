@@ -24,12 +24,14 @@ const ForecastIcon = (props) => {
   };
 
   return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color="#4d5259"
-      size={props.size}
-      animate={true}
-    />
+    <div className="ForecastIcon">
+      <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        color="#85a6b1"
+        size={props.size}
+        animate={true}
+      />
+    </div>
   );
 };
 

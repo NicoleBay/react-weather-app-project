@@ -1,0 +1,76 @@
+/* Icon theme */
+
+.swap {
+  color: #4d5259;
+  display: block;
+  font-size: 20px;
+  margin: 60px auto;
+  margin-bottom: -30px;
+  border: 0;
+  background: transparent;
+  transform: rotate(180deg);
+  transition: transform 300ms ease-out;
+}
+.swap:hover {
+  transform: scale(1.1);
+}
+
+/* Dark theme change */
+
+.dark {
+  color: #dedede;
+}
+
+/* Swap icon theme */
+
+.dark .swap {
+  color: #dedede;
+  transform: rotate(180deg);
+  transition: transform 300ms ease-out;
+}
+.dark .swap:hover {
+  transform: scale(1.1);
+}
+
+/* App Container */
+
+.dark {
+  background: #262231;
+}
+
+.dark .Weather {
+  background: #352f44;
+  border-color: #dedede;
+}
+
+/*Location icon*/
+.dark .fa-location-dot {
+  color: #dedede;
+}
+
+/* Today's weather */
+.dark .WeatherInfo {
+  color: #dedede;
+}
+/* Week Forecast Row */
+
+.dark .WeatherForecast {
+  color: #dedede;
+}
+
+/* Temp change link */
+
+.dark .linkNone {
+  color: #dedede;
+  font-weight: 100;
+}
+
+/* Footer */
+
+.dark .footer a {
+  color: #dedede;
+}
+
+.dark .footer a:hover {
+  color: #ffffff;
+}
