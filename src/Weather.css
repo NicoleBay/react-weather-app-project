@@ -91,3 +91,9 @@
     font-size: 40px;
   }
 }
+
+@media (max-width: 772px) {
+  .Weather .unit {
+    font-size: 15px;
+  }
+}
