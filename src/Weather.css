@@ -80,3 +80,14 @@
   top: -5px;
   margin-left: 2px;
 }
+
+@media (max-width: 575px) {
+  .Weather .location-icon {
+    margin-top: 20px;
+    max-width: 30%;
+    margin-bottom: 5px;
+  }
+  .Weather .temperature {
+    font-size: 40px;
+  }
+}

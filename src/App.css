@@ -23,3 +23,9 @@ body {
   color: #000000;
   transition: all 1s ease;
 }
+
+@media (max-width: 575px) {
+  .App footer {
+    font-size: 14px;
+  }
+}

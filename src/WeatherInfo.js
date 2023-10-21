@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
         <i className="fa-solid fa-location-dot mt-4 mb-2"></i> {props.data.city}
       </h1>
       <div className="row mt-4 temperature-now">
-        <div className="col-6">
+        <div className="col-sm-6">
           <img src={props.data.iconUrl} alt={props.data.description} />
           <WeatherTemperature
             unit={props.unit}
@@ -23,18 +23,18 @@ export default function WeatherInfo(props) {
           />
         </div>
 
-        <div className="col-6 list mt-3">
+        <div className="col-sm-6 list">
           <ul>
             <li className="text-capitalize">
-              <i class="fa-solid fa-hashtag"></i>
+              <i className="fa-solid fa-hashtag"></i>
               <strong> {props.data.description}</strong>
             </li>
             <li>
-              <i class="fa-solid fa-wind"></i> Wind Speed:{" "}
+              <i className="fa-solid fa-wind"></i> Wind Speed:{" "}
               <strong>{Math.round(props.data.wind * 2.24)} mph</strong>
             </li>
             <li>
-              <i class="fa-solid fa-droplet"></i> Humidity:{" "}
+              <i className="fa-solid fa-droplet"></i> Humidity:{" "}
               <strong>{props.data.humidity}%</strong>
             </li>
           </ul>
