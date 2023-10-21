@@ -10,7 +10,7 @@ export default function Swap() {
 
   return (
     <button className="swap" onClick={swapTheme}>
-      <i className="fa-solid fa-circle-half-stroke"></i>
+      <i className="fa-solid fa-circle-half-stroke" title="Switch theme"></i>
     </button>
   );
 }
