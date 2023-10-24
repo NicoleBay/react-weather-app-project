@@ -9,4 +9,9 @@
 
 .WeatherForecast-temperature-max {
   font-weight: 600;
+  font-size: 18px;
+}
+
+.WeatherForecast .WeatherForecast-day {
+  font-size: 18px;
 }
