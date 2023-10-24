@@ -87,13 +87,4 @@
     max-width: 30%;
     margin-bottom: 5px;
   }
-  .Weather .temperature {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 772px) {
-  .Weather .unit {
-    font-size: 15px;
-  }
 }

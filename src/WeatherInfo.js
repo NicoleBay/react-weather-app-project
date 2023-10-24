@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
         <i className="fa-solid fa-location-dot mt-4 mb-2"></i> {props.data.city}
       </h1>
       <div className="row mt-4 temperature-now">
-        <div className="col-sm-6">
+        <div className="col-md-6">
           <img src={props.data.iconUrl} alt={props.data.description} />
           <WeatherTemperature
             unit={props.unit}
@@ -23,7 +23,7 @@ export default function WeatherInfo(props) {
           />
         </div>
 
-        <div className="col-sm-6 list">
+        <div className="col-md-6 list">
           <ul>
             <li className="text-capitalize">
               <i className="fa-solid fa-hashtag"></i>
