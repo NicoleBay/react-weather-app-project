@@ -30,7 +30,7 @@ export default function Swap() {
         ></i>
       ) : (
         <i
-          className="fa-regular fa-sun"
+          className="fa-solid fa-sun"
           title="Switch to Dark Theme"
           alt="Light Theme"
         ></i>
