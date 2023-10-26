@@ -4,20 +4,26 @@ import "./WeatherTemperature.css";
 import "./App";
 
 export default function WeatherTemperature(props) {
+  // Function to switch the unit to Celsius when a link is clicked
   function showCelsius(event) {
     event.preventDefault();
+    // Call the `setUnit` function as a prop to update the unit to "celsius"
     props.setUnit("celsius");
   }
 
+  // Function to switch the unit to Fahrenheit when a link is clicked
   function showFahrenheit(event) {
     event.preventDefault();
+    // Call the `setUnit` function as a prop to update the unit to "fahrenheit"
     props.setUnit("fahrenheit");
   }
 
+  // Convert temperature from Celsius to Fahrenheit
   function fahrenheit() {
     return (props.celsius * 9) / 5 + 32;
   }
 
+  // Conditional rendering based on the value of the 'unit' prop
   if (props.unit === "celsius") {
     return (
       <span className="WeatherTemperature">

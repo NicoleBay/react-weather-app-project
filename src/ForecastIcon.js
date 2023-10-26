@@ -2,6 +2,7 @@ import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
 const ForecastIcon = (props) => {
+  // Mapping to corresponding icons
   const codeMapping = {
     "clear-sky-day": "CLEAR_DAY",
     "clear-sky-night": "CLEAR_NIGHT",
@@ -23,6 +24,7 @@ const ForecastIcon = (props) => {
     "mist-night": "FOG",
   };
 
+  // Render a weather icon using ReactAnimatedWeather
   return (
     <div className="ForecastIcon">
       <ReactAnimatedWeather

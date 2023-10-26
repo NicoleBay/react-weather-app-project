@@ -5,11 +5,14 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
+  // State variables to manage weather data, default city, and temperature unit
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   const [unit, setUnit] = useState("celsius");
 
+  // Function to handle the response from the weather API
   function handleResponse(response) {
+    // Update the weatherData state with the received data
     setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
@@ -26,22 +29,30 @@ export default function Weather(props) {
     });
   }
 
+  // Function to make an API request
   function search() {
     const apiKey = "b13b374bef64oac0e068e7t94aa7beef";
     const units = "metric";
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+    // API get request and call handleResponse with the data
     axios.get(apiUrl).then(handleResponse);
   }
 
+  // Function to handle form submission
   function handleSubmit(event) {
+    // Prevent the default form submission behavior
     event.preventDefault();
+    // Call the search function
     search();
   }
 
+  // Function to handle city input changes
   function handleCityChange(event) {
+    // Update the city state with the input value
     setCity(event.target.value);
   }
 
+  // Conditional rendering based on weather weatherData is ready
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -73,6 +84,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    // If weather data is not ready, initiate a search and display "Loading..."
     search();
     return "Loading...";
   }
